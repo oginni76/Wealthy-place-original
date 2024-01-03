@@ -48,6 +48,7 @@ body{
 .logo-container{
     display: flex;
     align-items: center;
+    text-decoration: none;
     
 }
 
@@ -60,8 +61,6 @@ body{
 .logo-text {
     color: var(--lightgreen);
     margin-left: 10px;
-    text-decoration: none;
-    text-decoration-line: none;
     animation: blink 3s infinite; /* Apply the blink animation */
 }
 
