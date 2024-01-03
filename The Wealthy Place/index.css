@@ -3,7 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'MTN';
+    font-family: 'MTN';    
 }
 
 h1{
@@ -14,7 +14,6 @@ h1{
 body{
     background-color: whitesmoke;
     font-family: 'Poppins', sans-serif;
-
 }
 
 :root{
@@ -36,52 +35,52 @@ body{
   } 
 
   html{
-    font-size: clamp(13px, 2.5vw, 15px);
+    /* font-size: clamp(13px, 2.5vw, 15px);  */
     scroll-behavior: smooth;
   }
 
-.logo{
+/* .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+} */
+
+.logo-container{
     display: flex;
     align-items: center;
+    
 }
 
 .logo_img{
-    width: 4rem;
-    margin: 10px;
+    width: 3rem;
+    /* margin: 10px; */
     
+}
+
+.logo-text {
+    color: var(--lightgreen);
+    margin-left: 10px;
+    text-decoration: none;
+    text-decoration-line: none;
+    animation: blink 3s infinite; /* Apply the blink animation */
 }
 
 header{
-    /* background-color: rgb(80, 3, 95); */
-    /* background-color: rgb(3, 2, 53); */
-    background-color: var(--darkgreen);
-    /* color: rgb(219, 144, 4); */
     color: rgb(105, 236, 105);
     font-family: 'MTNBold';
     padding: 20px;
-    align-items: center; 
+    align-items: center;
     display: flex;
     justify-content: space-between;
     width: auto;
-    border-bottom: 5px solid var(--lightgreen);
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
 }
 
-/* header h1{
-    font-size: clamp(13px, 2.5vw, 15px);
-} */
-
-
-
-/* header ul{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-   
-}  */
-
 header ul li{
-    padding-right: 10px;
+    padding-right: 25px;
     /* text-transform: uppercase; */
     display: inline-block;  
      
@@ -102,33 +101,37 @@ header ul li a {
     text-decoration: none; 
 }
 
-header ul li a:hover{
-    text-transform: uppercase;
-}
-
-header ul li a:hover::after{
-    width: 100%;
-}
 
 header ul li button{
     border: 2px solid var(--lightgreen);
-    color: var(--lightgreen);
-    padding: 0.5rem;
-    font-weight: 500;
-    background-color: var(--darkgreen);
-}
-
-header ul li button:hover{ 
-    background-color: var(--lightgreen);
-    color: white;
-    text-transform: uppercase;
+    padding: .5rem 2rem;
+    background-color: var(--darkgreen); 
+    /* background-color: transparent; */
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
     
 }
 
 
+
+/* Styles for the hamburger icon */
+.nav{
+    display: flex;
+    justify-content: ;
+} 
+
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+
 .home{
-    /* color: rgb(80, 3, 95); */
-    /* color: rgb(219, 144, 4); */
     color: var(--darkgreen);
     background-color: whitesmoke;
     display: flex;
@@ -136,40 +139,74 @@ header ul li button:hover{
 }
 
 .home_img{
-    width: 45rem;
+    width: 35rem;
 }
 
 .home .left{
-    padding: 150px 30px;
+    padding: 80px 30px;
 }
 
 .home h1{
     font-size: clamp(90px, 1.5vw, 95px);
+    
 }
 
-.about-us{
-    margin: 60px 40px;
-    color: var(--darkgreen);
-    background-color: rgb(69, 184, 115);
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 3rem;
-    display: grid;
-    grid-template-columns: 5fr 5fr; 
-    border-radius: 30px;
+/* CSS for fade-in animation */
+.fade-in {
+    opacity: 0; /* Initially set the opacity to 0 to hide the element */
+    transition: opacity 1.5s ease-in-out; /* Define transition property */
 }
 
-.about-us h1{
-    font-size: clamp(50px, 5vw, 70px);
-    margin: 40px;
+
+/* this causes the blinking */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+.reg-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 10px 50px;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-weight: 500;
+}
+
+.about-us-container{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center; 
 }
 
-.about-us-left{
-    text-align: justify;  
+
+.about_us{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-weight: 500;
+    color: var(--lightgreen);
 }
+    
+
+
+/* .about-us h1{
+    font-size: clamp(50px, 5vw, 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
 
 
 .book{
@@ -191,18 +228,6 @@ header ul li button:hover{
     
     
 }
-
-.reg-btn{
-        border: 2px solid var(--lightgreen);
-        color: var(--lightgreen);
-        padding: 0.5rem; 
-        font-weight: 500;
-        background-color: var(--darkgreen);
-        width: 80px;
-        margin-top: 20px;
-        cursor: pointer;
-}
-
 
 
 .founders{
@@ -268,11 +293,12 @@ header ul li button:hover{
     cursor: pointer;
 }
 
-.container{
+.wrapper{
 	max-width: 1170px;
 	margin:auto;
 
-}
+} 
+
 .row{
 	display: flex;
 	flex-wrap: wrap;
@@ -331,7 +357,6 @@ ul{
 	text-align: center;
 	line-height: 40px;
 	border-radius: 50%;
-	/* color: #ffffff; */
     color: var(--lightgreen);
 	transition: all 0.5s ease;
 }
@@ -344,12 +369,6 @@ ul{
 }
 
 
-
-
-
-
-
-
 /* tablet devices */
 @media (max-width:1024px) {
     .grid{
@@ -359,20 +378,18 @@ ul{
         grid-gap: 30px;
         align-items: center;
         
-    }
-    
-    
+    }  
 }
 
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none; /* Hide the icon in screens larger than 768px */
+    }
+}
 
 
 /*mobile devices landscape */
 @media(max-width: 768px){
-    /* header ul{
-        display: flex;
-        flex-direction: column;
- 
-    }  */
 
     header{
         display: grid;
@@ -381,19 +398,27 @@ ul{
     
     header ul li{
         margin: 0.5rem 0.5rem 0.5rem 0;
-   
-    
+        display: block;
+        padding-bottom: 10px;
+
     }  
+
+    .nav{
+        display: none;
+    }
+
+    .nav.active{
+        display: block;
+    }
+
 
 
     .home{
         background-color: whitesmoke;
-        display: flex;
-        flex-direction: column;
-        
         background-size: 35rem;
         background-repeat: no-repeat;
         display: flex;
+        flex-direction: column; 
         justify-content: center;
         align-items: center;   
         
@@ -459,37 +484,6 @@ ul{
 }
 
 
-@media (max-width: 700px) {
-
-    header ul li{
-        display: block;
-        padding-bottom: 10px;
-
-    }
-
-    /* nav{
-        position: absolute;
-        background: var(--darkgreen);
-        height: 100vh;
-        width: 150px;
-        top: 0;
-        right: 0;
-        text-align: left;
-        z-index: 2;
-    } */
-    
-    header ul li a {
-        color: var(--lightgreen);
-        text-decoration: none;
-        transition: .3s;
-        
-    }
-    
-}
-
-
-
-
 /* mobile devices portrait */
 @media (max-width:480px) {
      .grid{
@@ -510,18 +504,3 @@ ul{
 
  
 }
-
-
-
-/* @media(max-width: 767px){
-    .footer-col{
-      width: 50%;
-      margin-bottom: 30px;
-  }
-  }
-  @media(max-width: 574px){
-    .footer-col{
-      width: 100%;
-  }
-  }
-   */
